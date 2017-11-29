@@ -1,0 +1,9 @@
+En tree_node_create no hace falta crear pila. Llamadas al sistema guardan el estado de los registros hasta ese momentos, cambiando el contexto y dejando las cosas como estaban al volver. Por tanto, podemos guardar $a0 en un temporal en lugar de crear pila. (guardamos $a0 porque la llamada al sistema lo utilizará)
+
+ORDEN DE PRINT: -2 -5 -10 0 7 ...
+                0   
+      -5                   8
+      
+   -2     -10        7           20
+                            18 
+
